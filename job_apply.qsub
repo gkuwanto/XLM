@@ -1,0 +1,15 @@
+#!/bin/bash -l
+#$ -P multilm
+#$ -m ea
+#$ -N id_bpe
+#$ -pe omp 4
+module load gcc/5.5.0
+module load python3/3.7.7
+module load cuda/10.1
+module load pytorch/1.5
+module load apex/0.1
+
+
+
+
+sh get-data-nmt.sh --src en --tgt id
